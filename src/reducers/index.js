@@ -15,7 +15,8 @@ const reducer = (state= initialState,action)=>{
         case FETCHING_FAILURE:
             return {...state,loading:false,error:action.payload}
         case ADD_SMURF: 
-            return {...state,smurfs:[...state.smurfs,action.payload]};           
+            const smurf= action.payload 
+            return {...state,smurfs:[...state.smurfs,smurf]};           
              
         default:
             return state;
